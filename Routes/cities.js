@@ -19,12 +19,21 @@ router.post("/",async (req, res) => {
     cityName: req.body.cityName,
     cityCode: req.body.cityCode,
     desc: req.body.desc,
+    restaurants: {
+        restaurant1: {
+            tittle: req.body.restaurants.restaurant1.tittle,
+            rest_desc: req.body.restaurants.restaurant1.rest_desc,
+            ratings: req.body.restaurants.restaurant1.ratings,
+            address: req.body.restaurants.restaurant1.address,
+            imgurl: req.body.restaurants.restaurant1.imgurl
+        }
+    }
   });
   try {
     const savedCities =  await city.save();
     res.json(savedCities);   
   } catch (error) {
-    res.json({message: error});      
+    console.log(error);      
   }  
 });
 
