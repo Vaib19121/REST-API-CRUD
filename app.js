@@ -2,13 +2,13 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bodyparser = require('body-parser');
 require('dotenv/config');
+const key = require('./key');
 const cors = require('cors');
 const app = express();
-
 app.use(cors());
 app.use(bodyparser.json());
-const url = process.env.db_con
-mongoose.connect(url, {useNewUrlParser:true, useUnifiedTopology: true})
+const url = key.mongourl;
+mongoose.connect(url, {useNewUrlParser:true})
 const con = mongoose.connection
 
 con.on('open', () => {
