@@ -2,12 +2,11 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bodyparser = require('body-parser');
 require('dotenv/config');
-const key = require('./key.js');
 const cors = require('cors');
 const app = express();
 app.use(cors());
 app.use(bodyparser.json());
-const url = key.mongourl;
+const url = "mongodb+srv://admin:Admin123@uber-clone.8ttyu.mongodb.net/uber";
 mongoose.connect(url, {useNewUrlParser:true})
 const con = mongoose.connection
 
