@@ -7,7 +7,7 @@ const app = express();
 
 app.use(cors());
 app.use(bodyparser.json());
-const url = process.env.db_con;
+const url = process.env.db_con.toString();
 mongoose.connect(url, {useNewUrlParser:true})
 const con = mongoose.connection
 
