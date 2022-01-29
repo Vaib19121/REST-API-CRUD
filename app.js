@@ -8,7 +8,7 @@ const app = express();
 app.use(cors());
 app.use(bodyparser.json());
 const url = process.env.db_con;
-mongoose.connect(url, {useNewUrlParser:true})
+mongoose.connect(process.env.db_con, {useNewUrlParser:true})
 const con = mongoose.connection
 
 con.on('open', () => {
