@@ -7,7 +7,7 @@ const app = express();
 
 app.use(cors());
 app.use(bodyparser.json());
-const url = process.env.database_connection;
+const url = "mongodb+srv://admin:Admin123@uber-clone.8ttyu.mongodb.net/uber";
 mongoose.connect(url, {useNewUrlParser:true})
 const con = mongoose.connection
 
