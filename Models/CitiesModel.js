@@ -16,9 +16,9 @@ const CitiesSchema = moongoose.Schema({
         type: Date,
         default: Date.now
     },
-    restaurants: {
-        restaurant1: {
-            tittle: {
+    restaurants: [
+        {
+            title: {
                 type: String,
                 required: true
             },
@@ -37,9 +37,210 @@ const CitiesSchema = moongoose.Schema({
             imgurl:{
                 type: String,
                 required: true
-            }
+            },
+            food: [
+                {
+                    food_name: {
+                        type: String,
+                        required: true
+                    },
+                    food_desc: {
+                        type: String,
+                        required: true
+                    },
+                    food_price: {
+                        type: String,
+                        required: true
+                    },
+                    food_imgurl: {
+                        type: String,
+                        required: true
+                    },
+                    food_ratings: {
+                        type: String,
+                        required: true
+                    },
+                    food_time: {
+                        type: String,
+                        required: true
+                    },
+                    food_type: {
+                        type: String,
+                    },
+                    offer: {
+                        type: String,
+                        required: true
+                    }
+                },
+                {
+                    food_name: {
+                        type: String,
+                        required: true
+                    },
+                    food_desc: {
+                        type: String,
+                        required: true
+                    },
+                    food_price: {
+                        type: String,
+                        required: true
+                    },
+                    food_imgurl: {
+                        type: String,
+                        required: true
+                    },
+                    food_ratings: {
+                        type: String,
+                        required: true
+                    },
+                    food_time: {
+                        type: String,
+                        required: true
+                    },
+                    food_type: {
+                        type: String,
+                    },
+                    offer: {
+                        type: String,
+                        required: true
+                    }
+                },
+                {
+                    food_name: {
+                        type: String,
+                        required: true
+                    },
+                    food_desc: {
+                        type: String,
+                        required: true
+                    },
+                    food_price: {
+                        type: String,
+                        required: true
+                    },
+                    food_imgurl: {
+                        type: String,
+                        required: true
+                    },
+                    food_ratings: {
+                        type: String,
+                        required: true
+                    },
+                    food_time: {
+                        type: String,
+                        required: true
+                    },
+                    food_type: {
+                        type: String,
+                    },
+                    offer: {
+                        type: String,
+                        required: true
+                    }
+                },
+                {
+                    food_name: {
+                        type: String,
+                        required: true
+                    },
+                    food_desc: {
+                        type: String,
+                        required: true
+                    },
+                    food_price: {
+                        type: String,
+                        required: true
+                    },
+                    food_imgurl: {
+                        type: String,
+                        required: true
+                    },
+                    food_ratings: {
+                        type: String,
+                        required: true
+                    },
+                    food_time: {
+                        type: String,
+                        required: true
+                    },
+                    food_type: {
+                        type: String,
+                    },
+                    offer: {
+                        type: String,
+                        required: true
+                    }
+                },
+                {
+                    food_name: {
+                        type: String,
+                        required: true
+                    },
+                    food_desc: {
+                        type: String,
+                        required: true
+                    },
+                    food_price: {
+                        type: String,
+                        required: true
+                    },
+                    food_imgurl: {
+                        type: String,
+                        required: true
+                    },
+                    food_ratings: {
+                        type: String,
+                        required: true
+                    },
+                    food_time: {
+                        type: String,
+                        required: true
+                    },
+                    food_type: {
+                        type: String,
+                    },
+                    offer: {
+                        type: String,
+                        required: true
+                    }
+                },
+                {
+                    food_name: {
+                        type: String,
+                        required: true
+                    },
+                    food_desc: {
+                        type: String,
+                        required: true
+                    },
+                    food_price: {
+                        type: String,
+                        required: true
+                    },
+                    food_imgurl: {
+                        type: String,
+                        required: true
+                    },
+                    food_ratings: {
+                        type: String,
+                        required: true
+                    },
+                    food_time: {
+                        type: String,
+                        required: true
+                    },
+                    food_type: {
+                        type: String,
+                    },
+                    offer: {
+                        type: String,
+                        required: true
+                    }
+                },
+                
+            ]
         }
-    }
+    ]
 });
 
 module.exports = moongoose.model('Cities', CitiesSchema);
